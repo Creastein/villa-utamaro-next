@@ -1,0 +1,87 @@
+{
+    "nav": {
+        "home": "Beranda",
+        "amenities": "Fasilitas",
+        "rooms": "Kamar",
+        "gallery": "Galeri",
+        "experience": "Pengalaman",
+        "testimonials": "Testimoni",
+        "location": "Lokasi",
+        "book": "Pesan Sekarang"
+    },
+    "hero": {
+        "badge": "Lombok, Indonesia",
+        "title1": "Villa",
+        "title2": "Utamaro",
+        "desc1": "Tempat perlindungan pribadi dengan pemandangan laut 200°",
+        "desc2": "Dirancang untuk 6–11 tamu yang mencari ketenangan mutlak",
+        "cta": "Jelajahi Villa",
+        "scrollDown": "Gulir ke Bawah"
+    },
+    "amenities": {
+        "eyebrow": "Kemewahan Esensial",
+        "title1": "Dirancang untuk",
+        "title2": "Kehadiran.",
+        "desc": "Setiap detail dikurasi untuk membantu Anda terlepas dari dunia dan terhubung kembali dengan diri sendiri.",
+        "title": "Fasilitas",
+        "subtitle": "Semua yang Anda butuhkan untuk menginap yang nyaman dan mewah"
+    },
+    "rooms": {
+        "eyebrow": "Akomodasi",
+        "title1": "Suaka",
+        "title2": "Ketenangan.",
+        "desc": "Tiga ruang berbeda yang dirancang dengan estetika Jepang. Minimalis, harmonis, dan sangat terhubung dengan alam.",
+        "title": "Kamar & Suite",
+        "subtitle": "Tiga suite yang dirancang unik, masing-masing menawarkan perspektif tersendiri",
+        "size": "Ukuran",
+        "bedType": "Tipe Kasur",
+        "view": "Pemandangan",
+        "features": "Fitur"
+    },
+    "experience": {
+        "eyebrow": "Keramahan Jepang",
+        "title1": "Omotenashi.",
+        "title2": "Pelayanan Sepenuh Hati.",
+        "butler": {
+            "title": "Pelayan Pribadi",
+            "desc": "Dari mengatur pelajaran selancar di Teluk Gerupuk hingga mengatur BBQ saat matahari terbenam, tim kami mengantisipasi kebutuhan Anda bahkan sebelum Anda bertanya."
+        },
+        "chef": {
+            "title": "Koki Pribadi",
+            "desc": "Nikmati cita rasa Lombok dengan menu yang dipersonalisasi bersumber dari pasar dan nelayan lokal, disiapkan di dapur pribadi Anda."
+        },
+        "cta": "Rencanakan Pengalaman Anda"
+    },
+    "gallery": {
+        "title": "Galeri",
+        "subtitle": "Perjalanan visual melalui Villa Utamaro"
+    },
+    "testimonials": {
+        "title": "Ulasan Tamu",
+        "subtitle": "Apa kata tamu kami tentang pengalaman mereka"
+    },
+    "faq": {
+        "title": "Pertanyaan yang Sering Diajukan",
+        "subtitle": "Semua yang perlu Anda ketahui tentang Villa Utamaro"
+    },
+    "location": {
+        "title": "Lokasi",
+        "eyebrow": "Akses & Peta",
+        "subtitle": "Temukan kami di jantung Gerupuk, Lombok",
+        "desc": "Terletak di Ebuak Bay yang tenang, villa kami menawarkan keseimbangan sempurna antara privasi total dan akses mudah ke spot surfing kelas dunia.",
+        "getting": "Menuju Villa Utamaro",
+        "address": "Alamat",
+        "addressContent": "Jalan Pantai Lombok Tengah<br/>Gerupuk, Lombok Tengah<br/>Nusa Tenggara Barat 83573, Indonesia",
+        "airport": "Dari Bandara Internasional Lombok",
+        "airportDesc": "Sekitar 45 menit dengan mobil (30 km)<br/>Transfer bandara dapat diatur sesuai permintaan",
+        "nearby": "Tempat Wisata Terdekat",
+        "cta": "Hubungi untuk Petunjuk Arah"
+    },
+    "footer": {
+        "desc": "Tempat perlindungan Jepang pribadi Anda di jantung Lombok. Di mana desain minimalis bertemu dengan ketenangan tropis.",
+        "quickLinks": "Tautan Cepat",
+        "contact": "Hubungi Kami",
+        "follow": "Ikuti Kami",
+        "rights": "Hak cipta dilindungi."
+    }
+}

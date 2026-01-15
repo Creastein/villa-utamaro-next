@@ -1,0 +1,87 @@
+{
+    "nav": {
+        "home": "Home",
+        "amenities": "Amenities",
+        "rooms": "Rooms",
+        "gallery": "Gallery",
+        "experience": "Experience",
+        "testimonials": "Testimonials",
+        "location": "Location",
+        "book": "Book Now"
+    },
+    "hero": {
+        "badge": "Lombok, Indonesia",
+        "title1": "Villa",
+        "title2": "Utamaro",
+        "desc1": "A private sanctuary with 200° ocean views",
+        "desc2": "Designed for 6–11 guests seeking absolute zen",
+        "cta": "Explore Villa",
+        "scrollDown": "Scroll Down"
+    },
+    "amenities": {
+        "eyebrow": "Essential Luxuries",
+        "title1": "Designed for",
+        "title2": "Presence.",
+        "desc": "Every detail curated to help you disconnect from the world and reconnect with yourself.",
+        "title": "Amenities",
+        "subtitle": "Everything you need for a comfortable and luxurious stay"
+    },
+    "rooms": {
+        "eyebrow": "Accommodations",
+        "title1": "Sanctuaries of",
+        "title2": "Serenity.",
+        "desc": "Three distinct spaces designed with Japanese aesthetics. Minimalist, harmonious, and deeply connected to nature.",
+        "title": "Rooms & Suites",
+        "subtitle": "Three uniquely designed suites, each offering its own perspective",
+        "size": "Size",
+        "bedType": "Bed Type",
+        "view": "View",
+        "features": "Features"
+    },
+    "experience": {
+        "eyebrow": "Japanese Hospitality",
+        "title1": "Omotenashi.",
+        "title2": "Wholehearted Service.",
+        "butler": {
+            "title": "Dedicated Butler",
+            "desc": "From arranging surf lessons in Gerupuk Bay to organizing a sunset BBQ, our team anticipates your needs before you even ask."
+        },
+        "chef": {
+            "title": "Private Chef",
+            "desc": "Savor the flavors of Lombok with personalized menus sourced from local markets and fisherman, prepared in your private kitchen."
+        },
+        "cta": "Plan Your Experience"
+    },
+    "gallery": {
+        "title": "Gallery",
+        "subtitle": "A visual journey through Villa Utamaro"
+    },
+    "testimonials": {
+        "title": "Guest Reviews",
+        "subtitle": "What our guests say about their experience"
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about Villa Utamaro"
+    },
+    "location": {
+        "title": "Location",
+        "eyebrow": "Access & Map",
+        "subtitle": "Find us in the heart of Gerupuk, Lombok",
+        "desc": "Located in the quiet Ebuak Bay, our villa offers the perfect balance between total privacy and easy access to world-class surf spots.",
+        "getting": "Getting to Villa Utamaro",
+        "address": "Address",
+        "addressContent": "Jalan Pantai Lombok Tengah<br/>Gerupuk, Central Lombok<br/>West Nusa Tenggara 83573, Indonesia",
+        "airport": "From Lombok International Airport",
+        "airportDesc": "Approximately 45 minutes by car (30 km)<br/>Airport transfer can be arranged upon request",
+        "nearby": "Nearby Attractions",
+        "cta": "Contact for Directions"
+    },
+    "footer": {
+        "desc": "Zen Retreat by the Shore. Experience harmony between minimalist Japanese architecture and the waves of Lombok.",
+        "quickLinks": "Quick Links",
+        "contact": "Contact",
+        "follow": "Follow Us",
+        "rights": "All rights reserved."
+    }
+}
