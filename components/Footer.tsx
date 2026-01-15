@@ -51,18 +51,18 @@ export default function Footer() {
                             <li>West Nusa Tenggara, Indonesia</li>
                             <li className="pt-2">
                                 <a
-                                    href="tel:+628123456789"
+                                    href="tel:+6281802105341"
                                     className="transition-colors hover:text-[#C5A358]"
                                 >
-                                    +62 812 3456 789
+                                    +62 818 0210 5341
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="mailto:info@villautamaro.com"
+                                    href="mailto:villautamaro@gmail.com"
                                     className="transition-colors hover:text-[#C5A358]"
                                 >
-                                    info@villautamaro.com
+                                    villautamaro@gmail.com
                                 </a>
                             </li>
                         </ul>
@@ -73,7 +73,7 @@ export default function Footer() {
                         <h3 className="mb-4 font-['Noto_Serif_JP'] text-lg font-medium">{t('follow')}</h3>
                         <div className="flex gap-4">
                             <a
-                                href="https://instagram.com/villautamaro"
+                                href="https://www.instagram.com/villa_utamaro"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-700 transition-colors hover:border-[#C5A358] hover:text-[#C5A358]"
@@ -81,7 +81,7 @@ export default function Footer() {
                                 <Instagram size={20} />
                             </a>
                             <a
-                                href="mailto:info@villautamaro.com"
+                                href="mailto:villautamaro@gmail.com"
                                 className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-700 transition-colors hover:border-[#C5A358] hover:text-[#C5A358]"
                             >
                                 <Mail size={20} />

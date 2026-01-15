@@ -116,6 +116,7 @@ export default async function LocaleLayout({
         '@id': 'https://villautamaro.com',
         url: `https://villautamaro.com/${locale}`,
         telephone: '+62-818-0210-5341',
+        email: 'villautamaro@gmail.com',
         address: {
             '@type': 'PostalAddress',
             streetAddress: 'Jalan Pantai Lombok Tengah',
