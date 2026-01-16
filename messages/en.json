@@ -24,7 +24,8 @@
         "title2": "Presence.",
         "desc": "Offering access to an outdoor pool, shared lounge, and shared kitchen. The villa features a private pool, garden, BBQ facilities, free WiFi, and free private parking.",
         "title": "Amenities",
-        "subtitle": "Everything you need for a comfortable and luxurious stay"
+        "subtitle": "Everything you need for a comfortable and luxurious stay",
+        "popularAmenities": "Popular Amenities"
     },
     "rooms": {
         "eyebrow": "Accommodations",

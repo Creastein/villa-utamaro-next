@@ -13,6 +13,7 @@ export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('#home');
     const t = useTranslations('nav');
     const params = useParams();
     const pathname = usePathname();
@@ -27,6 +28,32 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // IntersectionObserver to detect active section
+    useEffect(() => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -80% 0px',
+            threshold: 0,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActiveSection(`#${entry.target.id}`);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        const sections = ['home', 'amenities', 'rooms', 'gallery', 'testimonials', 'contact', 'location'];
+        sections.forEach((id) => {
+            const element = document.getElementById(id);
+            if (element) observer.observe(element);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
     const navLinks = [
         { href: '#home', label: t('home') },
         { href: '#amenities', label: t('amenities') },
@@ -39,6 +66,7 @@ export default function Navbar() {
 
     const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         e.preventDefault();
+        setActiveSection(href);
         const element = document.querySelector(href);
         element?.scrollIntoView({ behavior: 'smooth' });
         setIsMobileMenuOpen(false);
@@ -72,18 +100,28 @@ export default function Navbar() {
 
                     {/* Desktop Links */}
                     <div className="hidden items-center space-x-12 lg:flex">
-                        {navLinks.map((link) => (
-                            <a
-                                key={link.href}
-                                href={link.href}
-                                onClick={(e) => handleNavClick(e, link.href)}
-                                className={`group relative text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:text-[#C5A358] active:scale-95 ${isScrolled ? 'text-stone-900' : 'text-white'
-                                    }`}
-                            >
-                                {link.label}
-                                <span className="absolute -bottom-2 left-0 h-[1px] w-0 bg-[#C5A358] transition-all duration-300 ease-out group-hover:w-full" />
-                            </a>
-                        ))}
+                        {navLinks.map((link) => {
+                            const isActive = activeSection === link.href;
+                            return (
+                                <a
+                                    key={link.href}
+                                    href={link.href}
+                                    onClick={(e) => handleNavClick(e, link.href)}
+                                    className={`group relative text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:text-[#C5A358] active:scale-95 ${isActive
+                                            ? 'text-[#C5A358]'
+                                            : isScrolled
+                                                ? 'text-stone-900'
+                                                : 'text-white'
+                                        }`}
+                                >
+                                    {link.label}
+                                    <span
+                                        className={`absolute -bottom-2 left-0 h-[1px] bg-[#C5A358] transition-all duration-300 ease-out ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                                            }`}
+                                    />
+                                </a>
+                            );
+                        })}
                     </div>
 
                     {/* Desktop Actions */}
@@ -150,16 +188,22 @@ export default function Navbar() {
                     }`}
             >
                 <div className="flex flex-col space-y-8 text-center">
-                    {navLinks.map((link) => (
-                        <a
-                            key={link.href}
-                            href={link.href}
-                            onClick={(e) => handleNavClick(e, link.href)}
-                            className="text-2xl font-light tracking-[0.2em] text-stone-900"
-                        >
-                            {link.label}
-                        </a>
-                    ))}
+                    {navLinks.map((link) => {
+                        const isActive = activeSection === link.href;
+                        return (
+                            <a
+                                key={link.href}
+                                href={link.href}
+                                onClick={(e) => handleNavClick(e, link.href)}
+                                className={`text-2xl tracking-[0.2em] transition-all duration-300 ${isActive
+                                        ? 'font-bold text-[#C5A358]'
+                                        : 'font-light text-stone-900'
+                                    }`}
+                            >
+                                {link.label}
+                            </a>
+                        );
+                    })}
 
                     {/* Mobile Language Switcher */}
                     <div className="flex justify-center gap-4 pt-4">

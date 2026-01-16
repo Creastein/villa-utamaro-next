@@ -57,23 +57,33 @@ export default function Amenities() {
                 </div>
 
                 {/* Highlights (Popular Amenities) */}
-                <div className="mt-20 grid gap-12 md:grid-cols-3">
-                    {currentHighlights.map((highlight, index) => {
-                        const Icon = highlight.icon;
-                        return (
-                            <div key={index} className="text-center">
-                                <div className="mb-4 flex justify-center">
-                                    <Icon className="h-12 w-12 text-[#C5A358]" strokeWidth={1.5} />
+                <div className="mt-20">
+                    {/* Popular Amenities Heading */}
+                    <div className="mb-12 text-center">
+                        <h3 className="font-['Noto_Serif_JP'] text-3xl font-light tracking-wide text-[#1A1A1A] md:text-4xl">
+                            {t('popularAmenities')}
+                        </h3>
+                    </div>
+
+                    {/* Grid with centered last row */}
+                    <div className="flex flex-wrap justify-center gap-12">
+                        {currentHighlights.map((highlight, index) => {
+                            const Icon = highlight.icon;
+                            return (
+                                <div key={index} className="w-full text-center md:w-[calc(33.333%-2rem)]">
+                                    <div className="mb-4 flex justify-center">
+                                        <Icon className="h-12 w-12 text-[#C5A358]" strokeWidth={1.5} />
+                                    </div>
+                                    <h3 className="mb-2 font-['Noto_Serif_JP'] text-xl font-medium text-[#1A1A1A]">
+                                        {highlight.title}
+                                    </h3>
+                                    <p className="text-sm leading-relaxed text-stone-600">
+                                        {highlight.description}
+                                    </p>
                                 </div>
-                                <h3 className="mb-2 font-['Noto_Serif_JP'] text-xl font-medium text-[#1A1A1A]">
-                                    {highlight.title}
-                                </h3>
-                                <p className="text-sm leading-relaxed text-stone-600">
-                                    {highlight.description}
-                                </p>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
         </section>
