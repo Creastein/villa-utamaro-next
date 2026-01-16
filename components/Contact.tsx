@@ -35,7 +35,7 @@ export default function Contact() {
                     variants={staggerContainer}
                     className="grid gap-8 md:grid-cols-3"
                 >
-                    {/* WhatsApp */}
+
                     <motion.a
                         variants={staggerItem}
                         whileHover={{ y: -8, transition: { duration: 0.3 } }}
@@ -68,7 +68,7 @@ export default function Contact() {
                         </p>
                     </motion.a>
 
-                    {/* Email */}
+
                     <motion.a
                         variants={staggerItem}
                         whileHover={{ y: -8, transition: { duration: 0.3 } }}
@@ -92,7 +92,7 @@ export default function Contact() {
 
 
 
-                    {/* Instagram */}
+
                     <motion.a
                         variants={staggerItem}
                         whileHover={{ y: -8, transition: { duration: 0.3 } }}

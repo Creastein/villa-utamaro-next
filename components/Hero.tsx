@@ -16,7 +16,7 @@ export default function Hero() {
 
     return (
         <section id="home" className="relative h-screen w-full overflow-hidden">
-            {/* Background Image */}
+
             <div className="absolute inset-0">
                 <Image
                     src="/images/hero.jpg"
@@ -26,11 +26,11 @@ export default function Hero() {
                     className="object-cover"
                     quality={75}
                 />
-                {/* Gradient Overlay */}
+
                 <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
             </div>
 
-            {/* Content */}
+
             <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -58,7 +58,7 @@ export default function Hero() {
                     </div>
                 </motion.div>
 
-                {/* Scroll Indicator */}
+
                 <motion.button
                     onClick={scrollToNext}
                     initial={{ opacity: 0 }}

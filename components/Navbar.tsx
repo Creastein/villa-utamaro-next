@@ -28,7 +28,7 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // IntersectionObserver to detect active section
+
     useEffect(() => {
         const observerOptions = {
             root: null,
@@ -44,7 +44,7 @@ export default function Navbar() {
             });
         }, observerOptions);
 
-        // Observe all sections
+
         const sections = ['home', 'amenities', 'rooms', 'gallery', 'testimonials', 'contact', 'location'];
         sections.forEach((id) => {
             const element = document.getElementById(id);
@@ -86,7 +86,7 @@ export default function Navbar() {
                     }`}
             >
                 <div className="mx-auto flex max-w-[1400px] items-center justify-between px-8 lg:px-16">
-                    {/* Logo */}
+
                     <Link href="/#home">
                         <Image
                             src="/images/logo.png"
@@ -98,7 +98,7 @@ export default function Navbar() {
                         />
                     </Link>
 
-                    {/* Desktop Links */}
+
                     <div className="hidden items-center space-x-12 lg:flex">
                         {navLinks.map((link) => {
                             const isActive = activeSection === link.href;
@@ -124,9 +124,9 @@ export default function Navbar() {
                         })}
                     </div>
 
-                    {/* Desktop Actions */}
+
                     <div className="hidden items-center gap-4 lg:flex">
-                        {/* Language Switcher */}
+
                         <div className="relative">
                             <button
                                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
@@ -159,18 +159,30 @@ export default function Navbar() {
 
                     </div>
 
-                    {/* Mobile Toggle */}
-                    <button
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className={`p-2 transition-colors lg:hidden ${isScrolled ? 'text-stone-900' : 'text-white'
-                            }`}
-                    >
-                        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                    </button>
+
+                    <div className="flex items-center gap-4 lg:hidden">
+                        <Link
+                            href={pathname}
+                            locale={locale === 'en' ? 'id' : 'en'}
+                            className={`flex items-center gap-1 text-sm font-bold uppercase tracking-widest transition-colors ${isScrolled ? 'text-stone-900' : 'text-white'
+                                }`}
+                        >
+                            <Globe size={20} />
+                            {locale === 'en' ? 'ID' : 'EN'}
+                        </Link>
+
+                        <button
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            className={`p-2 transition-colors ${isScrolled ? 'text-stone-900' : 'text-white'
+                                }`}
+                        >
+                            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        </button>
+                    </div>
                 </div>
             </nav>
 
-            {/* Mobile Menu */}
+
             <div
                 className={`fixed inset-0 z-40 flex h-screen w-full flex-col items-center justify-center bg-white transition-all duration-500 ease-in-out lg:hidden ${isMobileMenuOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
                     }`}
@@ -193,7 +205,7 @@ export default function Navbar() {
                         );
                     })}
 
-                    {/* Mobile Language Switcher */}
+
                     <div className="flex justify-center gap-4 pt-4">
                         {languages.map((lang) => (
                             <Link

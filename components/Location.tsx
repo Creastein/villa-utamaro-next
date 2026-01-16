@@ -26,7 +26,7 @@ export default function Location() {
                 </motion.div>
 
                 <div className="grid gap-8 lg:grid-cols-2">
-                    {/* Map */}
+
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
@@ -46,7 +46,7 @@ export default function Location() {
                         />
                     </motion.div>
 
-                    {/* Info */}
+
                     <motion.div
                         initial="hidden"
                         whileInView="visible"

@@ -20,7 +20,7 @@ export default function Footer() {
         >
             <div className="mx-auto max-w-[1400px] px-8 lg:px-16">
                 <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-                    {/* Brand */}
+
                     <div>
                         <Image
                             src="/images/logo-white.png"
@@ -34,7 +34,7 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    {/* Quick Links */}
+
                     <div>
                         <h3 className="mb-4 font-['Noto_Serif_JP'] text-lg font-medium">{t('quickLinks')}</h3>
                         <ul className="space-y-2">
@@ -51,7 +51,7 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Contact */}
+
                     <div>
                         <h3 className="mb-4 font-['Noto_Serif_JP'] text-lg font-medium">{t('contact')}</h3>
                         <ul className="space-y-2 text-sm text-stone-400">
@@ -76,7 +76,7 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Social */}
+
                     <div>
                         <h3 className="mb-4 font-['Noto_Serif_JP'] text-lg font-medium">{t('follow')}</h3>
                         <div className="flex gap-4">

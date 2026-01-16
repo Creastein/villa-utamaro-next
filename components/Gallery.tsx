@@ -32,7 +32,7 @@ export default function Gallery() {
         }
     };
 
-    // Filter images based on active category
+
     const filteredImages = activeCategory === 'all'
         ? galleryImages
         : galleryImages.filter(img => img.category === activeCategory);
@@ -57,7 +57,7 @@ export default function Gallery() {
         }
     };
 
-    // Keyboard navigation
+
     const handleKeyDown = (e: React.KeyboardEvent) => {
         if (e.key === 'Escape') closeLightbox();
         if (e.key === 'ArrowLeft') goToPrevious();
@@ -83,7 +83,7 @@ export default function Gallery() {
                         </p>
                     </motion.div>
 
-                    {/* Filter Tabs */}
+
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
@@ -91,7 +91,7 @@ export default function Gallery() {
                         variants={slideUp}
                         className="relative mb-8 w-full px-8 md:mb-12 md:flex md:justify-center md:px-0"
                     >
-                        {/* Tab Nav Buttons - Mobile Only */}
+
                         <button
                             onClick={() => scrollTabs('left')}
                             className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/50 p-1.5 shadow-sm backdrop-blur-sm transition-all hover:bg-white md:hidden"
@@ -133,7 +133,7 @@ export default function Gallery() {
                     </motion.div>
 
                     <div className="relative group">
-                        {/* Scroll Buttons - Visible on desktop */}
+
                         <button
                             onClick={() => scroll('left')}
                             className="absolute -left-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-2 shadow-lg backdrop-blur-sm transition-all hover:bg-white hover:scale-110 md:-left-8 md:p-3 lg:-left-12"
@@ -187,7 +187,7 @@ export default function Gallery() {
                 </div>
             </section>
 
-            {/* Lightbox */}
+
             <AnimatePresence>
                 {selectedImage !== null && (
                     <motion.div
@@ -200,7 +200,7 @@ export default function Gallery() {
                         onKeyDown={handleKeyDown}
                         tabIndex={0}
                     >
-                        {/* Close Button */}
+
                         <motion.button
                             initial={{ opacity: 0, rotate: -90 }}
                             animate={{ opacity: 1, rotate: 0 }}
@@ -212,7 +212,7 @@ export default function Gallery() {
                             <X size={32} />
                         </motion.button>
 
-                        {/* Previous Button */}
+
                         <motion.button
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -226,7 +226,7 @@ export default function Gallery() {
                             <ChevronLeft size={48} />
                         </motion.button>
 
-                        {/* Image */}
+
                         <motion.div
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -252,7 +252,7 @@ export default function Gallery() {
                             </motion.div>
                         </motion.div>
 
-                        {/* Next Button */}
+
                         <motion.button
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -266,7 +266,7 @@ export default function Gallery() {
                             <ChevronRight size={48} />
                         </motion.button>
 
-                        {/* Counter */}
+
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}

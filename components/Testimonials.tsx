@@ -48,7 +48,7 @@ export default function Testimonials() {
                             whileHover={{ y: -8, rotate: 1, transition: { duration: 0.3 } }}
                             className="rounded-lg border border-stone-200 bg-white p-8 transition-shadow duration-300 hover:shadow-lg"
                         >
-                            {/* Rating */}
+
                             <div className="mb-4 flex gap-1">
                                 {[...Array(testimonial.rating)].map((_, i) => (
                                     <motion.div
@@ -66,12 +66,12 @@ export default function Testimonials() {
                                 ))}
                             </div>
 
-                            {/* Testimonial Text */}
+
                             <p className="mb-6 leading-relaxed text-stone-600">
                                 "{testimonial.text}"
                             </p>
 
-                            {/* Author */}
+
                             <div className="flex items-center gap-4">
                                 <motion.div
                                     whileHover={{ scale: 1.1 }}

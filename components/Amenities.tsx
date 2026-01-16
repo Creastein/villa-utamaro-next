@@ -18,7 +18,7 @@ export default function Amenities() {
     return (
         <section id="amenities" className="bg-[#FCFAFA] py-20 md:py-32">
             <div className="mx-auto max-w-[1400px] px-8 lg:px-16">
-                {/* Section Title */}
+
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -34,7 +34,7 @@ export default function Amenities() {
                     </p>
                 </motion.div>
 
-                {/* Amenities Layout */}
+
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -78,9 +78,9 @@ export default function Amenities() {
                     })}
                 </motion.div>
 
-                {/* Highlights (Popular Amenities) */}
+
                 <div className="mt-20">
-                    {/* Popular Amenities Heading */}
+
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
@@ -93,7 +93,7 @@ export default function Amenities() {
                         </h3>
                     </motion.div>
 
-                    {/* Grid with centered last row */}
+
                     <motion.div
                         initial="hidden"
                         whileInView="visible"

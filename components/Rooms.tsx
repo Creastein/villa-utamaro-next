@@ -19,7 +19,7 @@ export default function Rooms() {
     return (
         <section id="rooms" className="bg-white py-20 md:py-32">
             <div className="mx-auto max-w-[1400px] px-8 lg:px-16">
-                {/* Section Title */}
+
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -35,7 +35,7 @@ export default function Rooms() {
                     </p>
                 </motion.div>
 
-                {/* Villa Highlights */}
+
                 <div className="mb-16 flex flex-wrap justify-center gap-8">
                     {currentHighlights.map((highlight, index) => {
                         const Icon = highlight.icon;
@@ -51,7 +51,7 @@ export default function Rooms() {
                     })}
                 </div>
 
-                {/* Bedrooms */}
+
                 <div className="space-y-20">
                     {currentBedrooms.map((room, index) => {
                         const ViewIcon = room.viewIcon;
@@ -66,7 +66,7 @@ export default function Rooms() {
                                 className={`flex flex-col gap-8 lg:flex-row ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                                     }`}
                             >
-                                {/* Image */}
+
                                 <motion.div
                                     whileHover={{ scale: 1.02 }}
                                     transition={{ duration: 0.4 }}
@@ -80,7 +80,7 @@ export default function Rooms() {
                                     />
                                 </motion.div>
 
-                                {/* Content */}
+
                                 <motion.div
                                     variants={staggerContainer}
                                     className="flex flex-col justify-center lg:w-1/2"
@@ -104,7 +104,7 @@ export default function Rooms() {
                                         {room.description}
                                     </motion.p>
 
-                                    {/* Room Details */}
+
                                     <motion.div
                                         variants={staggerItem}
                                         className="mb-6 flex flex-wrap gap-6"
@@ -126,7 +126,7 @@ export default function Rooms() {
                                         </div>
                                     </motion.div>
 
-                                    {/* Features */}
+
                                     <motion.div variants={staggerItem}>
                                         <p className="mb-3 text-base font-medium uppercase tracking-wider text-stone-500">
                                             {t('features')}
