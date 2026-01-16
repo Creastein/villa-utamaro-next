@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { analytics } from '@/lib/analytics';
 
 export default function Hero() {
     const t = useTranslations('hero');
@@ -43,6 +44,18 @@ export default function Hero() {
                     <p className="mx-auto max-w-3xl text-xl font-light leading-relaxed opacity-90 md:text-2xl">
                         {t('subtitle')}
                     </p>
+
+                    <div className="mt-8">
+                        <a
+                            href="https://wa.me/6281802105341"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => analytics.trackBookingClick('hero')}
+                            className="inline-block rounded-full bg-white px-8 py-3 text-sm font-bold uppercase tracking-widest text-[#1A1A1A] transition-all hover:bg-stone-100 hover:scale-105 active:scale-95 md:px-10 md:py-4 md:text-base"
+                        >
+                            {t('cta')}
+                        </a>
+                    </div>
                 </motion.div>
 
                 {/* Scroll Indicator */}

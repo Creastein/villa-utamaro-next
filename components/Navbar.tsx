@@ -156,19 +156,7 @@ export default function Navbar() {
                             )}
                         </div>
 
-                        {/* Book Now */}
-                        <a
-                            href="https://wa.me/6281802105341"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={() => analytics.trackBookingClick('navbar')}
-                            className={`rounded-full px-8 py-3 text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:scale-105 active:scale-95 ${isScrolled
-                                ? 'bg-stone-900 text-white hover:bg-stone-800'
-                                : 'bg-white text-stone-900 hover:bg-stone-100'
-                                }`}
-                        >
-                            {t('book')}
-                        </a>
+
                     </div>
 
                     {/* Mobile Toggle */}
