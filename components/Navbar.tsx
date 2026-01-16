@@ -73,8 +73,8 @@ export default function Navbar() {
     };
 
     const languages = [
-        { code: 'en', name: 'English', flag: '🇬🇧' },
-        { code: 'id', name: 'Indonesia', flag: '🇮🇩' },
+        { code: 'en', name: 'English', label: 'EN' },
+        { code: 'id', name: 'Indonesia', label: 'ID' },
     ];
 
     return (
@@ -107,11 +107,11 @@ export default function Navbar() {
                                     key={link.href}
                                     href={link.href}
                                     onClick={(e) => handleNavClick(e, link.href)}
-                                    className={`group relative text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:text-[#C5A358] active:scale-95 ${isActive
-                                            ? 'text-[#C5A358]'
-                                            : isScrolled
-                                                ? 'text-stone-900'
-                                                : 'text-white'
+                                    className={`group relative text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:text-[#C5A358] active:scale-95 ${isActive
+                                        ? 'text-[#C5A358]'
+                                        : isScrolled
+                                            ? 'text-stone-900'
+                                            : 'text-white'
                                         }`}
                                 >
                                     {link.label}
@@ -130,7 +130,7 @@ export default function Navbar() {
                         <div className="relative">
                             <button
                                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                                className={`flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:bg-stone-100 ${isScrolled ? 'text-stone-900' : 'text-white hover:bg-white/10'
+                                className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:bg-stone-100 ${isScrolled ? 'text-stone-900' : 'text-white hover:bg-white/10'
                                     }`}
                             >
                                 <Globe size={16} />
@@ -148,7 +148,7 @@ export default function Navbar() {
                                             className={`flex items-center gap-3 px-4 py-3 text-sm transition-colors hover:bg-stone-50 ${locale === lang.code ? 'bg-stone-100 font-medium' : ''
                                                 }`}
                                         >
-                                            <span className="text-xl">{lang.flag}</span>
+                                            <span className="rounded bg-stone-100 px-1.5 py-0.5 text-xs font-bold text-stone-600">{lang.label}</span>
                                             {lang.name}
                                         </Link>
                                     ))}
@@ -162,7 +162,7 @@ export default function Navbar() {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => analytics.trackBookingClick('navbar')}
-                            className={`rounded-full px-8 py-3 text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-105 active:scale-95 ${isScrolled
+                            className={`rounded-full px-8 py-3 text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:scale-105 active:scale-95 ${isScrolled
                                 ? 'bg-stone-900 text-white hover:bg-stone-800'
                                 : 'bg-white text-stone-900 hover:bg-stone-100'
                                 }`}
@@ -196,8 +196,8 @@ export default function Navbar() {
                                 href={link.href}
                                 onClick={(e) => handleNavClick(e, link.href)}
                                 className={`text-2xl tracking-[0.2em] transition-all duration-300 ${isActive
-                                        ? 'font-bold text-[#C5A358]'
-                                        : 'font-light text-stone-900'
+                                    ? 'font-bold text-[#C5A358]'
+                                    : 'font-light text-stone-900'
                                     }`}
                             >
                                 {link.label}
@@ -218,7 +218,7 @@ export default function Navbar() {
                                     : 'bg-stone-100 text-stone-900 hover:bg-stone-200'
                                     }`}
                             >
-                                <span>{lang.flag}</span>
+                                <span>{lang.label}</span>
                                 {lang.name}
                             </Link>
                         ))}

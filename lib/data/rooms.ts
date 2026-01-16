@@ -59,7 +59,7 @@ export const bedrooms = {
                 "Mini Fridge",
                 "Mosquito Net"
             ],
-            image: "/images/kamar-1.jpg"
+            image: "/images/gallery/bedroom-1.jpg"
         },
         {
             id: 2,
@@ -80,7 +80,7 @@ export const bedrooms = {
                 "Blackout Curtains",
                 "Bathtub"
             ],
-            image: "/images/kamar-2.jpg"
+            image: "/images/gallery/bedroom-2.jpg"
         },
         {
             id: 3,
@@ -101,7 +101,7 @@ export const bedrooms = {
                 "Blackout Curtains",
                 "Mosquito Net"
             ],
-            image: "/images/kamar-3.jpg"
+            image: "/images/gallery/bedroom-3.jpg"
         },
         {
             id: 4,
@@ -120,7 +120,7 @@ export const bedrooms = {
                 "Blackout Curtains",
                 "Safety Deposit Box"
             ],
-            image: "/images/kamar-4.jpg"
+            image: "/images/gallery/bedroom-4.jpg"
         }
     ],
     id: [
@@ -145,7 +145,7 @@ export const bedrooms = {
                 "Kulkas Mini",
                 "Kelambu"
             ],
-            image: "/images/kamar-1.jpg"
+            image: "/images/gallery/bedroom-1.jpg"
         },
         {
             id: 2,
@@ -166,7 +166,7 @@ export const bedrooms = {
                 "Gorden Peneduh Ruangan",
                 "Bak Mandi"
             ],
-            image: "/images/kamar-2.jpg"
+            image: "/images/gallery/bedroom-2.jpg"
         },
         {
             id: 3,
@@ -187,7 +187,7 @@ export const bedrooms = {
                 "Gorden Peneduh Ruangan",
                 "Kelambu"
             ],
-            image: "/images/kamar-3.jpg"
+            image: "/images/gallery/bedroom-3.jpg"
         },
         {
             id: 4,
@@ -206,7 +206,7 @@ export const bedrooms = {
                 "Gorden Peneduh Ruangan",
                 "Aman (Safety Box)"
             ],
-            image: "/images/kamar-4.jpg"
+            image: "/images/gallery/bedroom-4.jpg"
         }
     ]
 };

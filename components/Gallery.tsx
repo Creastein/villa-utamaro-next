@@ -13,12 +13,21 @@ export default function Gallery() {
     const [selectedImage, setSelectedImage] = useState<number | null>(null);
     const [activeCategory, setActiveCategory] = useState<GalleryCategory>('all');
     const scrollContainerRef = useRef<HTMLDivElement>(null);
+    const tabsContainerRef = useRef<HTMLDivElement>(null);
     const t = useTranslations('gallery');
 
     const scroll = (direction: 'left' | 'right') => {
         if (scrollContainerRef.current) {
             const { current } = scrollContainerRef;
             const scrollAmount = direction === 'left' ? -current.offsetWidth / 2 : current.offsetWidth / 2;
+            current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    };
+
+    const scrollTabs = (direction: 'left' | 'right') => {
+        if (tabsContainerRef.current) {
+            const { current } = tabsContainerRef;
+            const scrollAmount = direction === 'left' ? -150 : 150;
             current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         }
     };
@@ -80,24 +89,46 @@ export default function Gallery() {
                         whileInView="visible"
                         viewport={{ once: true, margin: '-100px' }}
                         variants={slideUp}
-                        className="mb-12 flex justify-center"
+                        className="relative mb-8 w-full px-8 md:mb-12 md:flex md:justify-center md:px-0"
                     >
-                        <div className="inline-flex flex-wrap justify-center gap-2 rounded-full bg-stone-100 p-2">
-                            {galleryCategories.map((category) => (
-                                <button
-                                    key={category}
-                                    onClick={() => setActiveCategory(category)}
-                                    className={`
-                                        rounded-full px-6 py-2.5 text-sm font-medium transition-all duration-300
-                                        ${activeCategory === category
-                                            ? 'bg-[#C5A358] text-white shadow-md'
-                                            : 'text-stone-600 hover:bg-stone-200 hover:text-[#1A1A1A]'
-                                        }
-                                    `}
-                                >
-                                    {t(`categories.${category}`)}
-                                </button>
-                            ))}
+                        {/* Tab Nav Buttons - Mobile Only */}
+                        <button
+                            onClick={() => scrollTabs('left')}
+                            className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/50 p-1.5 shadow-sm backdrop-blur-sm transition-all hover:bg-white md:hidden"
+                            aria-label="Scroll tabs left"
+                        >
+                            <ChevronLeft className="h-4 w-4 text-[#1A1A1A]" />
+                        </button>
+
+                        <button
+                            onClick={() => scrollTabs('right')}
+                            className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/50 p-1.5 shadow-sm backdrop-blur-sm transition-all hover:bg-white md:hidden"
+                            aria-label="Scroll tabs right"
+                        >
+                            <ChevronRight className="h-4 w-4 text-[#1A1A1A]" />
+                        </button>
+
+                        <div
+                            ref={tabsContainerRef}
+                            className="no-scrollbar w-full overflow-x-auto scroll-smooth md:w-auto md:justify-center md:overflow-visible"
+                        >
+                            <div className="grid grid-rows-2 grid-flow-col gap-2 w-max px-1 md:flex md:w-auto md:flex-wrap md:justify-center md:rounded-full md:bg-stone-100 md:p-2 md:px-2">
+                                {galleryCategories.map((category) => (
+                                    <button
+                                        key={category}
+                                        onClick={() => setActiveCategory(category)}
+                                        className={`
+                                            whitespace-nowrap rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 md:px-6 md:py-2.5 md:text-base
+                                            ${activeCategory === category
+                                                ? 'bg-[#C5A358] text-white shadow-md'
+                                                : 'bg-stone-100 text-stone-600 hover:bg-stone-200 hover:text-[#1A1A1A] md:bg-transparent'
+                                            }
+                                        `}
+                                    >
+                                        {t(`categories.${category}`)}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
                     </motion.div>
 
@@ -105,18 +136,18 @@ export default function Gallery() {
                         {/* Scroll Buttons - Visible on desktop */}
                         <button
                             onClick={() => scroll('left')}
-                            className="absolute -left-4 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white/90 p-3 shadow-lg backdrop-blur-sm transition-all hover:bg-white hover:scale-110 md:-left-8 md:block lg:-left-12"
+                            className="absolute -left-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-2 shadow-lg backdrop-blur-sm transition-all hover:bg-white hover:scale-110 md:-left-8 md:p-3 lg:-left-12"
                             aria-label="Scroll left"
                         >
-                            <ChevronLeft className="h-6 w-6 text-[#1A1A1A]" />
+                            <ChevronLeft className="h-5 w-5 text-[#1A1A1A] md:h-6 md:w-6" />
                         </button>
 
                         <button
                             onClick={() => scroll('right')}
-                            className="absolute -right-4 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white/90 p-3 shadow-lg backdrop-blur-sm transition-all hover:bg-white hover:scale-110 md:-right-8 md:block lg:-right-12"
+                            className="absolute -right-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-2 shadow-lg backdrop-blur-sm transition-all hover:bg-white hover:scale-110 md:-right-8 md:p-3 lg:-right-12"
                             aria-label="Scroll right"
                         >
-                            <ChevronRight className="h-6 w-6 text-[#1A1A1A]" />
+                            <ChevronRight className="h-5 w-5 text-[#1A1A1A] md:h-6 md:w-6" />
                         </button>
 
                         <AnimatePresence mode="wait">
@@ -127,7 +158,7 @@ export default function Gallery() {
                                 animate="visible"
                                 exit="hidden"
                                 variants={staggerContainer}
-                                className="grid grid-rows-2 grid-flow-col auto-cols-[85%] gap-4 overflow-x-auto pb-8 md:auto-cols-[45%] lg:auto-cols-[25%] scrollbar-hide"
+                                className="grid grid-rows-2 grid-flow-col auto-cols-[80%] gap-3 overflow-x-auto pb-8 md:gap-4 md:auto-cols-[45%] lg:auto-cols-[25%] scrollbar-hide"
                                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                             >
                                 {filteredImages.map((image, index) => (
@@ -146,7 +177,7 @@ export default function Gallery() {
                                         />
                                         <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/30" />
                                         <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                                            <p className="text-sm font-medium text-white">{image.title}</p>
+                                            <p className="text-base font-medium text-white">{image.title}</p>
                                         </div>
                                     </motion.button>
                                 ))}

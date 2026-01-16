@@ -58,7 +58,7 @@ export default function Amenities() {
                                     >
                                         <Icon className="h-6 w-6 text-[#C5A358]" strokeWidth={1.5} />
                                     </motion.div>
-                                    <h3 className="font-['Noto_Serif_JP'] text-lg font-medium text-[#1A1A1A]">
+                                    <h3 className="font-['Noto_Serif_JP'] text-xl font-medium text-[#1A1A1A]">
                                         {category.category}
                                     </h3>
                                 </div>
@@ -66,7 +66,7 @@ export default function Amenities() {
                                     {category.items.map((item, itemIndex) => (
                                         <li
                                             key={itemIndex}
-                                            className="flex items-center text-sm text-stone-600"
+                                            className="flex items-center text-base text-stone-600"
                                         >
                                             <span className="mr-2 h-1 w-1 rounded-full bg-[#C5A358]" />
                                             {item}

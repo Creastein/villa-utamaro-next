@@ -68,7 +68,7 @@ export default function Location() {
                             <motion.div variants={staggerItem}>
                                 <h4 className="mb-2 font-medium text-[#1A1A1A]">{t('address')}</h4>
                                 <p
-                                    className="text-stone-600"
+                                    className="text-lg text-stone-600"
                                     dangerouslySetInnerHTML={{ __html: t('addressContent') }}
                                 />
                             </motion.div>
@@ -76,7 +76,7 @@ export default function Location() {
                             <motion.div variants={staggerItem}>
                                 <h4 className="mb-2 font-medium text-[#1A1A1A]">{t('airport')}</h4>
                                 <p
-                                    className="text-stone-600"
+                                    className="text-lg text-stone-600"
                                     dangerouslySetInnerHTML={{ __html: t('airportDesc') }}
                                 />
                             </motion.div>
@@ -84,7 +84,7 @@ export default function Location() {
                             <motion.div variants={staggerItem}>
                                 <h4 className="mb-2 font-medium text-[#1A1A1A]">{t('nearby')}</h4>
                                 <ul className="space-y-1 text-stone-600">
-                                    <li className="flex items-center">
+                                    <li className="flex items-center text-lg">
                                         <span className="mr-2 h-1 w-1 rounded-full bg-[#C5A358]" />
                                         Gerupuk Beach - 100m
                                     </li>

@@ -63,7 +63,7 @@ export default function Contact() {
                         <h3 className="mb-2 font-['Noto_Serif_JP'] text-xl font-medium text-[#1A1A1A]">
                             WhatsApp
                         </h3>
-                        <p className="text-center text-sm text-stone-600">
+                        <p className="text-center text-lg text-stone-600">
                             +62 818 0210 5341
                         </p>
                     </motion.a>
@@ -85,7 +85,7 @@ export default function Contact() {
                         <h3 className="mb-2 font-['Noto_Serif_JP'] text-xl font-medium text-[#1A1A1A]">
                             Email
                         </h3>
-                        <p className="text-center text-sm text-stone-600">
+                        <p className="text-center text-lg text-stone-600">
                             villautamaro@gmail.com
                         </p>
                     </motion.a>

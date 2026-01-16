@@ -43,8 +43,8 @@ export default function Rooms() {
                             <div key={index} className="flex items-center gap-3">
                                 <Icon className="h-5 w-5 text-[#C5A358]" strokeWidth={1.5} />
                                 <div>
-                                    <p className="text-sm font-medium text-[#1A1A1A]">{highlight.label}</p>
-                                    <p className="text-sm text-stone-600">{highlight.value}</p>
+                                    <p className="text-base font-medium text-[#1A1A1A]">{highlight.label}</p>
+                                    <p className="text-base text-stone-600">{highlight.value}</p>
                                 </div>
                             </div>
                         );
@@ -110,7 +110,7 @@ export default function Rooms() {
                                         className="mb-6 flex flex-wrap gap-6"
                                     >
                                         <div>
-                                            <p className="text-xs uppercase tracking-wider text-stone-500">
+                                            <p className="text-sm uppercase tracking-wider text-stone-500">
                                                 {t('bedType')}
                                             </p>
                                             <p className="font-medium text-[#1A1A1A]">{room.bedType}</p>
@@ -118,7 +118,7 @@ export default function Rooms() {
                                         <div className="flex items-center gap-2">
                                             <ViewIcon className="h-4 w-4 text-[#C5A358]" strokeWidth={1.5} />
                                             <div>
-                                                <p className="text-xs uppercase tracking-wider text-stone-500">
+                                                <p className="text-sm uppercase tracking-wider text-stone-500">
                                                     {t('view')}
                                                 </p>
                                                 <p className="font-medium text-[#1A1A1A]">{room.view}</p>
@@ -128,14 +128,14 @@ export default function Rooms() {
 
                                     {/* Features */}
                                     <motion.div variants={staggerItem}>
-                                        <p className="mb-3 text-sm font-medium uppercase tracking-wider text-stone-500">
+                                        <p className="mb-3 text-base font-medium uppercase tracking-wider text-stone-500">
                                             {t('features')}
                                         </p>
                                         <ul className="grid grid-cols-1 gap-2 md:grid-cols-2">
                                             {room.features.map((feature, featureIndex) => (
                                                 <li
                                                     key={featureIndex}
-                                                    className="flex items-center text-sm text-stone-600"
+                                                    className="flex items-center text-base text-stone-600"
                                                 >
                                                     <span className="mr-2 h-1 w-1 rounded-full bg-[#C5A358]" />
                                                     {feature}
