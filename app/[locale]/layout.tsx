@@ -20,12 +20,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
     const metadata = {
         en: {
-            title: 'Villa Utamaro | Luxury Japanese Villa in Lombok',
+            title: 'VILLA UTAMARO',
             description: 'Zen Retreat by the Shore. Villa Utamaro - Harmony between minimalist Japanese architecture and the waves of Lombok. Experience tranquility, luxury, and world-class surfing.',
             keywords: 'villa lombok, luxury villa, japanese villa, surfing lombok, villa utamaro, gerupuk, infinity pool, bali villa, luxury accommodation indonesia',
         },
         id: {
-            title: 'Villa Utamaro | Villa Jepang Mewah di Lombok',
+            title: 'VILLA UTAMARO',
             description: 'Retret Zen di Tepi Pantai. Villa Utamaro - Harmoni antara arsitektur minimalis Jepang dan ombak Lombok. Rasakan ketenangan, kemewahan, dan surfing kelas dunia.',
             keywords: 'villa lombok, villa mewah, villa jepang, surfing lombok, villa utamaro, gerupuk, kolam infinity, villa bali, akomodasi mewah indonesia',
         },
