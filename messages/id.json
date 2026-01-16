@@ -10,12 +10,8 @@
         "book": "Pesan Sekarang"
     },
     "hero": {
-        "badge": "Lombok, Indonesia",
-        "title1": "Villa",
-        "title2": "Utamaro",
-        "desc1": "Hanya beberapa langkah dari Pantai Gerupuk Bay",
-        "desc2": "Private Villa untuk 6-11 Tamu dengan Kolam Renang & Pemandangan Laut",
-        "cta": "Jelajahi Villa",
+        "title": "Villa Utamaro",
+        "subtitle": "Tempat perlindungan pribadi 3 kamar tidur dengan kolam renang tanpa batas, pemandangan laut panoramik, dan fasilitas mewah layanan lengkap.",
         "scrollDown": "Gulir ke Bawah"
     },
     "amenities": {

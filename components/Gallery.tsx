@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { galleryImages, galleryCategories, type GalleryCategory } from '@/lib/data/gallery';
@@ -12,7 +12,16 @@ import { slideUp, staggerContainer, staggerItem } from '@/lib/utils/animations';
 export default function Gallery() {
     const [selectedImage, setSelectedImage] = useState<number | null>(null);
     const [activeCategory, setActiveCategory] = useState<GalleryCategory>('all');
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
     const t = useTranslations('gallery');
+
+    const scroll = (direction: 'left' | 'right') => {
+        if (scrollContainerRef.current) {
+            const { current } = scrollContainerRef;
+            const scrollAmount = direction === 'left' ? -current.offsetWidth / 2 : current.offsetWidth / 2;
+            current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    };
 
     // Filter images based on active category
     const filteredImages = activeCategory === 'all'
@@ -92,37 +101,58 @@ export default function Gallery() {
                         </div>
                     </motion.div>
 
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            key={activeCategory}
-                            initial="hidden"
-                            animate="visible"
-                            exit="hidden"
-                            variants={staggerContainer}
-                            className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4"
+                    <div className="relative group">
+                        {/* Scroll Buttons - Visible on desktop */}
+                        <button
+                            onClick={() => scroll('left')}
+                            className="absolute -left-4 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white/90 p-3 shadow-lg backdrop-blur-sm transition-all hover:bg-white hover:scale-110 md:-left-8 md:block lg:-left-12"
+                            aria-label="Scroll left"
                         >
-                            {filteredImages.map((image, index) => (
-                                <motion.button
-                                    key={index}
-                                    variants={staggerItem}
-                                    whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-                                    onClick={() => openLightbox(index)}
-                                    className="group relative aspect-square overflow-hidden rounded-lg"
-                                >
-                                    <Image
-                                        src={image.thumbnail}
-                                        alt={image.title}
-                                        fill
-                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                    />
-                                    <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/30" />
-                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                                        <p className="text-sm font-medium text-white">{image.title}</p>
-                                    </div>
-                                </motion.button>
-                            ))}
-                        </motion.div>
-                    </AnimatePresence>
+                            <ChevronLeft className="h-6 w-6 text-[#1A1A1A]" />
+                        </button>
+
+                        <button
+                            onClick={() => scroll('right')}
+                            className="absolute -right-4 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white/90 p-3 shadow-lg backdrop-blur-sm transition-all hover:bg-white hover:scale-110 md:-right-8 md:block lg:-right-12"
+                            aria-label="Scroll right"
+                        >
+                            <ChevronRight className="h-6 w-6 text-[#1A1A1A]" />
+                        </button>
+
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={activeCategory}
+                                ref={scrollContainerRef}
+                                initial="hidden"
+                                animate="visible"
+                                exit="hidden"
+                                variants={staggerContainer}
+                                className="grid grid-rows-2 grid-flow-col auto-cols-[85%] gap-4 overflow-x-auto pb-8 md:auto-cols-[45%] lg:auto-cols-[25%] scrollbar-hide"
+                                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                            >
+                                {filteredImages.map((image, index) => (
+                                    <motion.button
+                                        key={index}
+                                        variants={staggerItem}
+                                        whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+                                        onClick={() => openLightbox(index)}
+                                        className="group relative aspect-square overflow-hidden rounded-lg"
+                                    >
+                                        <Image
+                                            src={image.thumbnail}
+                                            alt={image.title}
+                                            fill
+                                            className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/30" />
+                                        <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                            <p className="text-sm font-medium text-white">{image.title}</p>
+                                        </div>
+                                    </motion.button>
+                                ))}
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
                 </div>
             </section>
 

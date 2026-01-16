@@ -37,14 +37,11 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="max-w-4xl"
                 >
-                    <h1 className="mb-6 font-['Noto_Serif_JP'] text-5xl font-light tracking-[0.2em] md:text-6xl lg:text-7xl">
-                        VILLA UTAMARO
+                    <h1 className="mb-6 font-['Noto_Serif_JP'] text-4xl font-light tracking-[0.1em] md:text-5xl lg:text-6xl uppercase">
+                        {t('title')}
                     </h1>
-                    <p className="mb-8 text-lg font-light tracking-[0.15em] md:text-xl">
-                        Zen Retreat by the Shore
-                    </p>
-                    <p className="mx-auto max-w-2xl text-base font-light leading-relaxed opacity-90 md:text-lg">
-                        Harmony between minimalist Japanese architecture and the waves of Lombok
+                    <p className="mx-auto max-w-3xl text-lg font-light leading-relaxed opacity-90 md:text-xl">
+                        {t('subtitle')}
                     </p>
                 </motion.div>
 

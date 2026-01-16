@@ -10,12 +10,8 @@
         "book": "Book Now"
     },
     "hero": {
-        "badge": "Lombok, Indonesia",
-        "title1": "Villa",
-        "title2": "Utamaro",
-        "desc1": "Just a few steps from Gerupuk Bay Beach",
-        "desc2": "Private Villa for 6-11 Guests with Pool & Ocean Views",
-        "cta": "Explore Villa",
+        "title": "Villa Utamaro",
+        "subtitle": "A private 3-bedroom sanctuary with infinity pool, panoramic ocean views, and full-service luxury amenities.",
         "scrollDown": "Scroll Down"
     },
     "amenities": {
