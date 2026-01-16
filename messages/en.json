@@ -55,7 +55,20 @@
     },
     "gallery": {
         "title": "Gallery",
-        "subtitle": "A visual journey through Villa Utamaro"
+        "subtitle": "A visual journey through Villa Utamaro",
+        "categories": {
+            "all": "All",
+            "living-room": "Living Room",
+            "kitchen": "Full Kitchen",
+            "dining-area": "Dining Area",
+            "bedroom": "Bedroom",
+            "bathroom": "Bathroom",
+            "backyard": "Backyard",
+            "patio-bbq": "Patio BBQ Area",
+            "balcony": "Balcony",
+            "exterior": "Exterior",
+            "additional": "Additional Photos"
+        }
     },
     "testimonials": {
         "title": "Guest Reviews",

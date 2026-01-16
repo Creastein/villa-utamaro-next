@@ -55,7 +55,20 @@
     },
     "gallery": {
         "title": "Galeri",
-        "subtitle": "Perjalanan visual melalui Villa Utamaro"
+        "subtitle": "Perjalanan visual melalui Villa Utamaro",
+        "categories": {
+            "all": "Semua",
+            "living-room": "Ruang tamu",
+            "kitchen": "Dapur lengkap",
+            "dining-area": "Area makan",
+            "bedroom": "Kamar tidur",
+            "bathroom": "Kamar mandi",
+            "backyard": "Halaman belakang",
+            "patio-bbq": "Patio Area BBQ",
+            "balcony": "Balkon",
+            "exterior": "Bagian luar",
+            "additional": "Foto tambahan"
+        }
     },
     "testimonials": {
         "title": "Ulasan Tamu",

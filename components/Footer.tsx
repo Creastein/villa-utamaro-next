@@ -3,13 +3,21 @@
 import Image from 'next/image';
 import { Instagram, Mail } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
+import { slideUp } from '@/lib/utils/animations';
 
 export default function Footer() {
     const t = useTranslations('footer');
     const tNav = useTranslations('nav');
 
     return (
-        <footer className="bg-[#1A1A1A] py-12 text-white">
+        <motion.footer
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-100px' }}
+            variants={slideUp}
+            className="bg-[#1A1A1A] py-12 text-white"
+        >
             <div className="mx-auto max-w-[1400px] px-8 lg:px-16">
                 <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
                     {/* Brand */}
@@ -34,7 +42,7 @@ export default function Footer() {
                                 <li key={link}>
                                     <a
                                         href={`#${link}`}
-                                        className="text-sm text-stone-400 transition-colors hover:text-[#C5A358]"
+                                        className="link-underline text-sm text-stone-400 transition-colors hover:text-[#C5A358]"
                                     >
                                         {tNav(link)}
                                     </a>
@@ -72,20 +80,24 @@ export default function Footer() {
                     <div>
                         <h3 className="mb-4 font-['Noto_Serif_JP'] text-lg font-medium">{t('follow')}</h3>
                         <div className="flex gap-4">
-                            <a
+                            <motion.a
+                                whileHover={{ scale: 1.1, rotate: 5 }}
+                                transition={{ duration: 0.3 }}
                                 href="https://www.instagram.com/villa_utamaro"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-700 transition-colors hover:border-[#C5A358] hover:text-[#C5A358]"
                             >
                                 <Instagram size={20} />
-                            </a>
-                            <a
+                            </motion.a>
+                            <motion.a
+                                whileHover={{ scale: 1.1, rotate: 5 }}
+                                transition={{ duration: 0.3 }}
                                 href="mailto:villautamaro@gmail.com"
                                 className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-700 transition-colors hover:border-[#C5A358] hover:text-[#C5A358]"
                             >
                                 <Mail size={20} />
-                            </a>
+                            </motion.a>
                         </div>
                     </div>
                 </div>
@@ -94,6 +106,6 @@ export default function Footer() {
                     <p>&copy; {new Date().getFullYear()} Villa Utamaro. {t('rights')}</p>
                 </div>
             </div>
-        </footer>
+        </motion.footer>
     );
 }

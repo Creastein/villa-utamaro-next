@@ -4,6 +4,9 @@ import Image from 'next/image';
 import { bedrooms, villaHighlights } from '@/lib/data/rooms';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
+import { motion } from 'framer-motion';
+import { slideUp, slideInLeft, slideInRight, staggerContainer, staggerItem } from '@/lib/utils/animations';
+
 
 export default function Rooms() {
     const t = useTranslations('rooms');
@@ -17,14 +20,20 @@ export default function Rooms() {
         <section id="rooms" className="bg-white py-20 md:py-32">
             <div className="mx-auto max-w-[1400px] px-8 lg:px-16">
                 {/* Section Title */}
-                <div className="mb-16 text-center">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: '-100px' }}
+                    variants={slideUp}
+                    className="mb-16 text-center"
+                >
                     <h2 className="mb-4 font-['Noto_Serif_JP'] text-4xl font-light tracking-wide text-[#1A1A1A] md:text-5xl">
                         {t('title')}
                     </h2>
                     <p className="mx-auto max-w-2xl text-stone-600">
                         {t('subtitle')}
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Villa Highlights */}
                 <div className="mb-16 flex flex-wrap justify-center gap-8">
@@ -46,40 +55,60 @@ export default function Rooms() {
                 <div className="space-y-20">
                     {currentBedrooms.map((room, index) => {
                         const ViewIcon = room.viewIcon;
+                        const isEven = index % 2 === 0;
                         return (
-                            <div
+                            <motion.div
                                 key={room.id}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, margin: '-100px' }}
+                                variants={isEven ? slideInLeft : slideInRight}
                                 className={`flex flex-col gap-8 lg:flex-row ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                                     }`}
                             >
                                 {/* Image */}
-                                <div className="relative h-[400px] w-full overflow-hidden rounded-lg lg:w-1/2">
+                                <motion.div
+                                    whileHover={{ scale: 1.02 }}
+                                    transition={{ duration: 0.4 }}
+                                    className="relative h-[400px] w-full overflow-hidden rounded-lg lg:w-1/2"
+                                >
                                     <Image
                                         src={room.image}
                                         alt={room.name}
                                         fill
                                         className="object-cover transition-transform duration-700 hover:scale-105"
                                     />
-                                </div>
+                                </motion.div>
 
                                 {/* Content */}
-                                <div className="flex flex-col justify-center lg:w-1/2">
-                                    <h3 className="mb-2 font-['Noto_Serif_JP'] text-3xl font-light text-[#1A1A1A]">
+                                <motion.div
+                                    variants={staggerContainer}
+                                    className="flex flex-col justify-center lg:w-1/2"
+                                >
+                                    <motion.h3
+                                        variants={staggerItem}
+                                        className="mb-2 font-['Noto_Serif_JP'] text-3xl font-light text-[#1A1A1A]"
+                                    >
                                         {room.name}
-                                    </h3>
-                                    <p className="mb-4 text-lg text-[#C5A358]">{room.subtitle}</p>
-                                    <p className="mb-6 leading-relaxed text-stone-600">
+                                    </motion.h3>
+                                    <motion.p
+                                        variants={staggerItem}
+                                        className="mb-4 text-lg text-[#C5A358]"
+                                    >
+                                        {room.subtitle}
+                                    </motion.p>
+                                    <motion.p
+                                        variants={staggerItem}
+                                        className="mb-6 leading-relaxed text-stone-600"
+                                    >
                                         {room.description}
-                                    </p>
+                                    </motion.p>
 
                                     {/* Room Details */}
-                                    <div className="mb-6 flex flex-wrap gap-6">
-                                        <div>
-                                            <p className="text-xs uppercase tracking-wider text-stone-500">
-                                                {t('size')}
-                                            </p>
-                                            <p className="font-medium text-[#1A1A1A]">{room.size}</p>
-                                        </div>
+                                    <motion.div
+                                        variants={staggerItem}
+                                        className="mb-6 flex flex-wrap gap-6"
+                                    >
                                         <div>
                                             <p className="text-xs uppercase tracking-wider text-stone-500">
                                                 {t('bedType')}
@@ -95,10 +124,10 @@ export default function Rooms() {
                                                 <p className="font-medium text-[#1A1A1A]">{room.view}</p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </motion.div>
 
                                     {/* Features */}
-                                    <div>
+                                    <motion.div variants={staggerItem}>
                                         <p className="mb-3 text-sm font-medium uppercase tracking-wider text-stone-500">
                                             {t('features')}
                                         </p>
@@ -113,9 +142,9 @@ export default function Rooms() {
                                                 </li>
                                             ))}
                                         </ul>
-                                    </div>
-                                </div>
-                            </div>
+                                    </motion.div>
+                                </motion.div>
+                            </motion.div>
                         );
                     })}
                 </div>
