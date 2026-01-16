@@ -1,4 +1,4 @@
-import { Droplets, Waves, Compass, Bath, Utensils, Tv, Sun, Heart } from "lucide-react";
+import { Droplets, Car, CigaretteOff, Wifi, Bath, Utensils, Tv, Sun, Heart, Plane } from "lucide-react";
 
 interface Highlight {
     icon: any;
@@ -16,35 +16,55 @@ export const highlights = {
     en: [
         {
             icon: Droplets,
-            title: "Infinity Pool",
-            description: "Swim with breathtaking open ocean views.",
+            title: "Outdoor Pool",
+            description: "Private infinity pool with stunning ocean views.",
         },
         {
-            icon: Waves,
-            title: "Surf Access",
-            description: "Steps away from world-class Gerupuk surf spots.",
+            icon: Plane,
+            title: "Airport Shuttle",
+            description: "Convenient airport transfer service available.",
         },
         {
-            icon: Compass,
-            title: "Zen Design",
-            description: "Minimalist architecture blending with nature's harmony.",
+            icon: CigaretteOff,
+            title: "Non-smoking Rooms",
+            description: "Fresh and clean spacious living environments.",
+        },
+        {
+            icon: Car,
+            title: "Free Parking",
+            description: "Secure private parking on hotel premises.",
+        },
+        {
+            icon: Wifi,
+            title: "Free WiFi",
+            description: "High-speed internet access throughout the villa.",
         },
     ],
     id: [
         {
             icon: Droplets,
-            title: "Infinity Pool",
-            description: "Berenang dengan pemandangan laut lepas yang menakjubkan.",
+            title: "Kolam Renang Outdoor",
+            description: "Kolam renang infinity pribadi dengan pemandangan laut.",
         },
         {
-            icon: Waves,
-            title: "Surf Access",
-            description: "Langkah kaki menuju titik selancar kelas dunia Gerupuk.",
+            icon: Plane,
+            title: "Antar-jemput Bandara",
+            description: "Layanan transfer bandara tersedia untuk kenyamanan Anda.",
         },
         {
-            icon: Compass,
-            title: "Zen Design",
-            description: "Arsitektur minimalis yang menyatu dengan harmoni alam.",
+            icon: CigaretteOff,
+            title: "Kamar Bebas Rokok",
+            description: "Lingkungan hidup yang segar, bersih, dan luas.",
+        },
+        {
+            icon: Car,
+            title: "Parkir Gratis",
+            description: "Parkir pribadi aman tersedia di lokasi properti.",
+        },
+        {
+            icon: Wifi,
+            title: "WiFi Gratis",
+            description: "Akses internet berkecepatan tinggi di seluruh area vila.",
         },
     ]
 };

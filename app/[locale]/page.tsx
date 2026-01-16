@@ -21,9 +21,9 @@ export default function Home() {
         <Rooms />
         <Gallery />
         <Testimonials />
-        <FAQ />
         <Contact />
         <Location />
+        <FAQ />
       </main>
       <Footer />
       <FloatingWhatsApp />

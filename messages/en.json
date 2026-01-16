@@ -4,8 +4,8 @@
         "amenities": "Amenities",
         "rooms": "Rooms",
         "gallery": "Gallery",
-        "experience": "Experience",
         "testimonials": "Testimonials",
+        "contact": "Contact",
         "location": "Location",
         "book": "Book Now"
     },
@@ -13,8 +13,8 @@
         "badge": "Lombok, Indonesia",
         "title1": "Villa",
         "title2": "Utamaro",
-        "desc1": "A private sanctuary with 200° ocean views",
-        "desc2": "Designed for 6–11 guests seeking absolute zen",
+        "desc1": "Just a few steps from Gerupuk Bay Beach",
+        "desc2": "Private Villa for 6-11 Guests with Pool & Ocean Views",
         "cta": "Explore Villa",
         "scrollDown": "Scroll Down"
     },
@@ -22,7 +22,7 @@
         "eyebrow": "Essential Luxuries",
         "title1": "Designed for",
         "title2": "Presence.",
-        "desc": "Every detail curated to help you disconnect from the world and reconnect with yourself.",
+        "desc": "Offering access to an outdoor pool, shared lounge, and shared kitchen. The villa features a private pool, garden, BBQ facilities, free WiFi, and free private parking.",
         "title": "Amenities",
         "subtitle": "Everything you need for a comfortable and luxurious stay"
     },
@@ -30,7 +30,7 @@
         "eyebrow": "Accommodations",
         "title1": "Sanctuaries of",
         "title2": "Serenity.",
-        "desc": "Three distinct spaces designed with Japanese aesthetics. Minimalist, harmonious, and deeply connected to nature.",
+        "desc": "The villa features 3 bedrooms, 3 bathrooms, bed linen, towels, a flat-screen TV, a dining area, a fully equipped kitchen, and a terrace with sea views.",
         "title": "Rooms & Suites",
         "subtitle": "Three uniquely designed suites, each offering its own perspective",
         "size": "Size",
@@ -68,14 +68,19 @@
         "title": "Location",
         "eyebrow": "Access & Map",
         "subtitle": "Find us in the heart of Gerupuk, Lombok",
-        "desc": "Located in the quiet Ebuak Bay, our villa offers the perfect balance between total privacy and easy access to world-class surf spots.",
+        "desc": "Located in Blumbang, just a few steps from Gerupuk Bay Beach. Car rental service is available at the villa for your convenience.",
         "getting": "Getting to Villa Utamaro",
         "address": "Address",
         "addressContent": "Jalan Pantai Lombok Tengah<br/>Gerupuk, Central Lombok<br/>West Nusa Tenggara 83573, Indonesia",
-        "airport": "From Lombok International Airport",
-        "airportDesc": "Approximately 45 minutes by car (30 km)<br/>Airport transfer can be arranged upon request",
+        "airport": "Distances",
+        "airportDesc": "Lombok International Airport: 22 km<br/>Narmada Temple: 48 km",
         "nearby": "Nearby Attractions",
         "cta": "Contact for Directions"
+    },
+    "contact": {
+        "title": "Get in Touch",
+        "subtitle": "We'd love to hear from you. Reach out through any of these channels.",
+        "phone": "Phone"
     },
     "footer": {
         "desc": "Zen Retreat by the Shore. Experience harmony between minimalist Japanese architecture and the waves of Lombok.",

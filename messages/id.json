@@ -4,8 +4,8 @@
         "amenities": "Fasilitas",
         "rooms": "Kamar",
         "gallery": "Galeri",
-        "experience": "Pengalaman",
         "testimonials": "Testimoni",
+        "contact": "Kontak",
         "location": "Lokasi",
         "book": "Pesan Sekarang"
     },
@@ -13,8 +13,8 @@
         "badge": "Lombok, Indonesia",
         "title1": "Villa",
         "title2": "Utamaro",
-        "desc1": "Tempat perlindungan pribadi dengan pemandangan laut 200°",
-        "desc2": "Dirancang untuk 6–11 tamu yang mencari ketenangan mutlak",
+        "desc1": "Hanya beberapa langkah dari Pantai Gerupuk Bay",
+        "desc2": "Private Villa untuk 6-11 Tamu dengan Kolam Renang & Pemandangan Laut",
         "cta": "Jelajahi Villa",
         "scrollDown": "Gulir ke Bawah"
     },
@@ -22,7 +22,7 @@
         "eyebrow": "Kemewahan Esensial",
         "title1": "Dirancang untuk",
         "title2": "Kehadiran.",
-        "desc": "Setiap detail dikurasi untuk membantu Anda terlepas dari dunia dan terhubung kembali dengan diri sendiri.",
+        "desc": "Menawarkan akses ke kolam renang outdoor, lounge bersama, serta dapur lengkap. Vila ini memiliki kolam renang pribadi, taman, fasilitas BBQ, WiFi gratis, dan parkir pribadi.",
         "title": "Fasilitas",
         "subtitle": "Semua yang Anda butuhkan untuk menginap yang nyaman dan mewah"
     },
@@ -30,7 +30,7 @@
         "eyebrow": "Akomodasi",
         "title1": "Suaka",
         "title2": "Ketenangan.",
-        "desc": "Tiga ruang berbeda yang dirancang dengan estetika Jepang. Minimalis, harmonis, dan sangat terhubung dengan alam.",
+        "desc": "Vila ini memiliki 3 kamar tidur, 3 kamar mandi, seprai, handuk, TV layar datar, ruang makan, dapur lengkap, dan teras dengan pemandangan laut.",
         "title": "Kamar & Suite",
         "subtitle": "Tiga suite yang dirancang unik, masing-masing menawarkan perspektif tersendiri",
         "size": "Ukuran",
@@ -68,14 +68,19 @@
         "title": "Lokasi",
         "eyebrow": "Akses & Peta",
         "subtitle": "Temukan kami di jantung Gerupuk, Lombok",
-        "desc": "Terletak di Ebuak Bay yang tenang, villa kami menawarkan keseimbangan sempurna antara privasi total dan akses mudah ke spot surfing kelas dunia.",
+        "desc": "Terletak di Blumbang, hanya beberapa langkah dari Pantai Gerupuk Bay. Rental mobil tersedia di vila untuk kemudahan akses Anda.",
         "getting": "Menuju Villa Utamaro",
         "address": "Alamat",
         "addressContent": "Jalan Pantai Lombok Tengah<br/>Gerupuk, Lombok Tengah<br/>Nusa Tenggara Barat 83573, Indonesia",
-        "airport": "Dari Bandara Internasional Lombok",
-        "airportDesc": "Sekitar 45 menit dengan mobil (30 km)<br/>Transfer bandara dapat diatur sesuai permintaan",
+        "airport": "Jarak Tempuh",
+        "airportDesc": "Bandara Internasional Lombok: 22 km<br/>Narmada Temple: 48 km",
         "nearby": "Tempat Wisata Terdekat",
         "cta": "Hubungi untuk Petunjuk Arah"
+    },
+    "contact": {
+        "title": "Hubungi Kami",
+        "subtitle": "Kami senang mendengar dari Anda. Hubungi kami melalui salah satu saluran berikut.",
+        "phone": "Telepon"
     },
     "footer": {
         "desc": "Tempat perlindungan Jepang pribadi Anda di jantung Lombok. Di mana desain minimalis bertemu dengan ketenangan tropis.",

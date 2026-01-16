@@ -7,6 +7,7 @@ import { usePathname } from '@/i18n/routing';
 import { useParams } from 'next/navigation';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
+import { analytics } from '@/lib/analytics';
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -31,8 +32,8 @@ export default function Navbar() {
         { href: '#amenities', label: t('amenities') },
         { href: '#rooms', label: t('rooms') },
         { href: '#gallery', label: t('gallery') },
-        { href: '#experience', label: t('experience') },
         { href: '#testimonials', label: t('testimonials') },
+        { href: '#contact', label: t('contact') },
         { href: '#location', label: t('location') },
     ];
 
@@ -52,8 +53,8 @@ export default function Navbar() {
         <>
             <nav
                 className={`fixed top-0 z-50 w-full transition-all duration-700 ${isScrolled
-                        ? 'bg-white/90 py-3 shadow-md backdrop-blur-sm md:py-4'
-                        : 'bg-transparent py-4 md:py-6'
+                    ? 'bg-white/90 py-3 shadow-md backdrop-blur-sm md:py-4'
+                    : 'bg-transparent py-4 md:py-6'
                     }`}
             >
                 <div className="mx-auto flex max-w-[1400px] items-center justify-between px-8 lg:px-16">
@@ -119,12 +120,13 @@ export default function Navbar() {
 
                         {/* Book Now */}
                         <a
-                            href="https://wa.me/628123456789"
+                            href="https://wa.me/6281802105341"
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => analytics.trackBookingClick('navbar')}
                             className={`rounded-full px-8 py-3 text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-105 active:scale-95 ${isScrolled
-                                    ? 'bg-stone-900 text-white hover:bg-stone-800'
-                                    : 'bg-white text-stone-900 hover:bg-stone-100'
+                                ? 'bg-stone-900 text-white hover:bg-stone-800'
+                                : 'bg-white text-stone-900 hover:bg-stone-100'
                                 }`}
                         >
                             {t('book')}
@@ -168,8 +170,8 @@ export default function Navbar() {
                                 locale={lang.code as 'en' | 'id'}
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className={`flex items-center gap-2 rounded-full px-6 py-2 text-sm transition-colors ${locale === lang.code
-                                        ? 'bg-stone-900 text-white'
-                                        : 'bg-stone-100 text-stone-900 hover:bg-stone-200'
+                                    ? 'bg-stone-900 text-white'
+                                    : 'bg-stone-100 text-stone-900 hover:bg-stone-200'
                                     }`}
                             >
                                 <span>{lang.flag}</span>
@@ -179,9 +181,10 @@ export default function Navbar() {
                     </div>
 
                     <a
-                        href="https://wa.me/628123456789"
+                        href="https://wa.me/6281802105341"
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() => analytics.trackBookingClick('mobile_menu')}
                         className="mt-4 rounded-full bg-stone-900 px-12 py-4 text-xs font-bold uppercase tracking-widest text-white shadow-xl"
                     >
                         {t('book')}

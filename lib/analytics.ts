@@ -40,7 +40,7 @@ export const trackEvent = (eventName: string, eventParams?: Record<string, any>)
 // Pre-defined event trackers
 export const analytics = {
     // Track WhatsApp clicks
-    trackWhatsAppClick: (location: 'floating' | 'location' | 'navbar') => {
+    trackWhatsAppClick: (location: 'floating' | 'location' | 'navbar' | 'contact') => {
         trackEvent('whatsapp_click', {
             button_location: location,
         });
