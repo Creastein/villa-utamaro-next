@@ -3,7 +3,7 @@ import Hero from '@/components/Hero';
 import Amenities from '@/components/Amenities';
 import Rooms from '@/components/Rooms';
 import Gallery from '@/components/Gallery';
-import Experience from '@/components/Experience';
+import Contact from '@/components/Contact';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import Location from '@/components/Location';
@@ -20,9 +20,9 @@ export default function Home() {
         <Amenities />
         <Rooms />
         <Gallery />
-        <Experience />
         <Testimonials />
         <FAQ />
+        <Contact />
         <Location />
       </main>
       <Footer />

@@ -4,6 +4,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import AnalyticsProvider from '@/components/AnalyticsProvider';
 import "../globals.css";
 
 const notoSerifJP = Noto_Serif_JP({
@@ -156,8 +158,12 @@ export default async function LocaleLayout({
             </head>
             <body className={`${notoSerifJP.variable} antialiased`}>
                 <NextIntlClientProvider messages={messages}>
+                    <AnalyticsProvider />
                     {children}
                 </NextIntlClientProvider>
+                {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+                    <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+                )}
             </body>
         </html>
     );
