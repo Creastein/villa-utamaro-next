@@ -38,6 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         title: meta.title,
         description: meta.description,
         keywords: meta.keywords,
+
         authors: [{ name: 'Villa Utamaro' }],
         creator: 'Villa Utamaro',
         publisher: 'Villa Utamaro',
